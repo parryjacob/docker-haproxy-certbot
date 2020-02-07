@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/certbot certonly -c /usr/local/etc/letsencrypt/cli.ini "$@"
+/usr/local/bin/certbot-auto certonly -c /usr/local/etc/letsencrypt/cli.ini "$@"

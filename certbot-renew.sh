@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/certbot renew "$@"
+/usr/local/bin/certbot-auto renew "$@"

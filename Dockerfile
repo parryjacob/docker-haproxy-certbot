@@ -35,7 +35,7 @@ RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Install Certbot
-RUN wget https://dl.eff.org/certbot-auto -O /usr/local/bin/certbot && chmod 0755 /usr/local/bin/certbot
+RUN wget https://dl.eff.org/certbot-auto -O /usr/local/bin/certbot-auto && chmod 0755 /usr/local/bin/certbot-auto
 
 # Setup Certbot
 RUN mkdir -p /usr/local/etc/haproxy/certs.d
