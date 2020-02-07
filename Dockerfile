@@ -48,6 +48,9 @@ COPY certbot-certonly.sh /usr/bin/certbot-certonly
 COPY certbot-renew.sh /usr/bin/certbot-renew
 RUN chmod +x /usr/bin/haproxy-refresh /usr/bin/haproxy-restart /usr/bin/certbot-certonly /usr/bin/certbot-renew
 
+# Ensure that certbot-auto is bootstrapped
+RUN /usr/local/bin/certbot-auto --os-packages-only
+
 # Add startup script
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
