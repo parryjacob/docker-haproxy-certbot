@@ -26,8 +26,8 @@ RUN buildDeps='curl gcc libc6-dev libpcre3-dev libssl-dev make' \
   && rm -rf /usr/src/haproxy \
   && apt-get purge -y --auto-remove $buildDeps
 
-# Install Supervisor, cron, libnl-utils, net-tools, iptables
-RUN apt-get update && apt-get install -y supervisor cron libnl-utils net-tools iptables && \
+# Install Supervisor, cron, libnl-utils, net-tools, iptables, wget
+RUN apt-get update && apt-get install -y supervisor cron libnl-utils net-tools iptables wget && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Setup Supervisor
